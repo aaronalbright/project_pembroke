@@ -1,1 +1,15 @@
+body {
+  background-color: #2E2E2E;
+}
 
+h1 {
+  color: #fff
+}
+
+svg {
+  fill: #ff3d00;
+  stroke: #dd2c00;
+  border: 5px black solid;
+  margin: 5%;
+  padding: 5%;
+}
