@@ -7,10 +7,9 @@ h1 {
   color: #fff
 }
 
-svg {
+.icons {
   fill: #ff3d00;
   stroke: #dd2c00;
-  stroke-width: 2;
   border: 25px #080808 solid;
   border-radius: 20%;
   margin: 5%;
