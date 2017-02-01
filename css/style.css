@@ -1,5 +1,6 @@
 body {
   background-color: #2E2E2E;
+  padding-bottom: 50px;
 }
 
 h1 {
@@ -9,8 +10,9 @@ h1 {
 svg {
   fill: #ff3d00;
   stroke: #dd2c00;
-  border: 5px black solid;
+  stroke-width: 2;
+  border: 25px #080808 solid;
+  border-radius: 20%;
   margin: 5%;
-  padding: 5%;
   background-color: #080808;
 }
