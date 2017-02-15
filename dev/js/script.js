@@ -1,6 +1,9 @@
+var $ = jQuery = require('jquery');
+require('./bootstrap.min.js');
+
 var bardata = [];
 
-for (var i=0; i < 50; i++) {
+for (var i=0; i < 15; i++) {
     bardata.push(Math.round(Math.random()*100)+10)
 }
 
@@ -9,7 +12,7 @@ bardata.sort(function compareNumbers(a,b) {
 });
 
 var width = d3.select('#chart').node().getBoundingClientRect().width,
-    height = 600
+    height = 300
 
 var tempColor;
 
@@ -23,7 +26,7 @@ var x = d3.scale.linear()
 
 var y = d3.scale.ordinal()
         .domain(d3.range(0, bardata.length))
-        .rangeBands([0, height], 0.1)
+        .rangeBands([0, height], 0.2)
 
 var tooltip = d3.select('body').append('div')
         .style('position', 'absolute')
@@ -77,7 +80,7 @@ myChart.transition()
     })
     .attr('x', 0)
     .delay(function(d, i) {
-        return i * 20;
+        return i * 50;
     })
-    .duration(1000)
+    .duration(2000)
     .ease('elastic')
