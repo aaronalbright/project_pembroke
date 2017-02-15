@@ -1,41 +1,32 @@
-@import 'bootstrap.css';
-@import 'flaticon.css';
-
+@import url(bootstrap.css);
+@import url(flaticon.css);
 body {
   background-color: #2E2E2E;
-  padding-bottom: 50px;
-}
+  padding-bottom: 50px; }
 
 h1, h2, h3, p {
-  color: #fff;
-}
+  color: #fff; }
 
 h2 {
-  margin-top: 0;
-}
+  margin-top: 0; }
 
 .icon {
-  text-align: center;
-}
+  text-align: center; }
 
 a:hover {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .icondest::before {
   font-size: 50px;
   -webkit-text-stroke: 0.5px #dd2c00;
-  border: 15px #080808 solid;
-}
+  border: 15px #080808 solid; }
 
 div.dest {
-  padding-top: 20px;
-}
+  padding-top: 20px; }
 
 .glyphicon {
   color: #fff;
-  margin-top: 5px;
-}
+  margin-top: 5px; }
 
 .close {
   float: right;
@@ -43,13 +34,49 @@ div.dest {
   font-weight: bold;
   line-height: 1;
   text-shadow: 0 5px 0 #000;
-  opacity: 1;
-}
+  opacity: 1; }
+
 .close:hover,
 .close:focus {
   color: #E8E8E8;
   text-decoration: none;
   cursor: pointer;
   filter: alpha(opacity=50);
-  opacity: .5;
-}
+  opacity: .5; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+.m-scene {
+  /** Reverse "exit" animations */ }
+  .m-scene .scene_element {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both; }
+  .m-scene .scene_element--fadein {
+    animation-name: fadeIn; }
+  .m-scene .scene_element--fadeinup {
+    animation-name: fadeInUp; }
+  .m-scene .scene_element--fadeinright {
+    animation-name: fadeInRight; }
+  .m-scene.is-exiting .scene_element {
+    animation-direction: alternate-reverse; }

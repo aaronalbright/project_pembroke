@@ -1,13 +1,13 @@
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     browserify = require('gulp-browserify'),
+    sass = require('gulp-sass'),
     concatCss = require('gulp-concat-css'),
     cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
     gulpif = require('gulp-if');
-    webserver = require('gulp-webserver')
-    path = require('path'),
-    swPrecache = require('sw-precache');
+    webserver = require('gulp-webserver'),
+    path = require('path');
 
 var src = './dev',
 dest = './app'
@@ -23,19 +23,27 @@ gulp.task('js', function() {
     .pipe(gulp.dest(dest + '/js'));
 });
 
+gulp.task('sass', function () {
+  return gulp.src( src + '/sass/style.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(src + '/css'));
+});
+
 gulp.task('css', function() {
-  gulp.src( src + '/css/style.css')
+   gulp.src( src + '/css/style.css')
     .pipe(concatCss('style.css', { rebaseUrls: false }))
     .pipe(gulpif(env === 'production', cleanCSS()))
   .pipe(gulp.dest(dest + '/css'));
 });
 
 gulp.task('watch', function() {
+    gulp.watch(src + '/js/**/*', ['js']);
+    gulp.watch( src + '/sass/style.scss', ['sass']);
     gulp.watch(src + '/css/*.css', ['css']);
     gulp.watch(dest + '/*.html');
 });
 
-gulp.task('webserver', ['css', 'js'], function() {
+gulp.task('webserver', ['sass', 'css','js'], function() {
   gulp.src(dest)
   .pipe(webserver({
       livereload: true,
@@ -43,4 +51,4 @@ gulp.task('webserver', ['css', 'js'], function() {
   }));
 });
 
-gulp.task('default', ['watch', 'webserver']);
+gulp.task('default', ['watch','webserver']);

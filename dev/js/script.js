@@ -1,4 +1,5 @@
-var $ = jQuery = require('jquery');
+$ = jQuery = require('jquery'),
+smoothState = require('./smoothState.min.js');
 require('./bootstrap.min.js');
 
 var bardata = [];
@@ -80,7 +81,37 @@ myChart.transition()
     })
     .attr('x', 0)
     .delay(function(d, i) {
-        return i * 50;
+        return i * 10;
     })
     .duration(2000)
     .ease('elastic')
+
+$(function(){
+  var $page = $('#main'),
+      options = {
+        debug: true,
+        prefetch: true,
+        cacheLength: 2,
+        forms: 'form',
+        onStart: {
+          duration: 300, // Duration of our animation
+          render: function ($container) {
+            // Add your CSS animation reversing class
+            $container.addClass('is-exiting');
+            // Restart your animation
+            smoothState.restartCSSAnimations();
+          }
+        },
+        onReady: {
+          duration: 0,
+          render: function ($container, $newContent) {
+            // Remove your CSS animation reversing class
+            $container.removeClass('is-exiting');
+            // Inject the new content
+            $container.html($newContent);
+          }
+        }
+      },
+      smoothState = $page.smoothState(options).data('smoothState');
+
+});
