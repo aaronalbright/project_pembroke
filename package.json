@@ -1,0 +1,32 @@
+{
+  "name": "pembroke",
+  "version": "0.0.3",
+  "description": "A web app that helps you understand your car's language.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronalbright/project_pembroke.git"
+  },
+  "author": "Aaron Albright",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "browserify-shim": "^3.8.13",
+    "gulp": "^3.8.8",
+    "gulp-clean-css": "^3.0.2",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-if": "^2.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "^0.9.1",
+    "handlebars": "^4.0.5",
+    "jquery": "^3.1.1",
+    "lodash.assign": "^4.2.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  }
+}
