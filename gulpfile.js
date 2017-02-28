@@ -1,27 +1,27 @@
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    browserify = require('gulp-browserify'),
-    sass = require('gulp-sass'),
-    concatCss = require('gulp-concat-css'),
-    cleanCSS = require('gulp-clean-css'),
-    uglify = require('gulp-uglify'),
-    gulpif = require('gulp-if');
-    webserver = require('gulp-webserver'),
-    path = require('path');
+var source = require('vinyl-source-stream');
+var watchify = require('watchify');
+var streamify = require('gulp-streamify');
+var gulp = require('gulp');
+var browserify = require('browserify');
+var sass = require('gulp-sass');
+var concatCss = require('gulp-concat-css');
+var cleanCSS = require('gulp-clean-css');
+var uglify = require('gulp-uglify');
+var webserver = require('gulp-webserver');
+var gutil = require('gulp-util');
+var assign = require('lodash.assign');
 
-var src = './dev',
-dest = './app'
-env = 'production';
+var src = './dev';
+var customOpts = {
+  entries: [src + '/js/script.js'],
+  debug: true
+};
+var opts = assign({}, watchify.args, customOpts);
+var b = watchify(browserify(opts));
 
-gulp.task('js', function() {
-  return gulp.src(src + '/js/script.js')
-    .pipe(browserify())
-    .pipe(gulpif(env === 'production', uglify()))
-    .on('error', function (err) {
-      console.error('Error!', err.message);
-    })
-    .pipe(gulp.dest(dest + '/js'));
-});
+var dest = './app';
+
+gulp.task('js', bundle);
 
 gulp.task('sass', function () {
   return gulp.src( src + '/sass/style.scss')
@@ -32,7 +32,7 @@ gulp.task('sass', function () {
 gulp.task('css', function() {
    gulp.src( src + '/css/style.css')
     .pipe(concatCss('style.css', { rebaseUrls: false }))
-    .pipe(gulpif(env === 'production', cleanCSS()))
+    .pipe(cleanCSS())
   .pipe(gulp.dest(dest + '/css'));
 });
 
@@ -52,3 +52,11 @@ gulp.task('webserver', ['sass', 'css','js'], function() {
 });
 
 gulp.task('default', ['watch','webserver']);
+
+function bundle() {
+  return b.bundle()
+  .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+  .pipe(source('script.js'))
+  // .pipe(streamify(uglify()))
+  .pipe(gulp.dest(dest + '/js'));
+}

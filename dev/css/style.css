@@ -4,8 +4,11 @@ body {
   background-color: #2E2E2E;
   padding-bottom: 50px; }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
   color: #fff; }
+
+h4 {
+  text-decoration: underline; }
 
 h2 {
   margin-top: 0; }
@@ -26,11 +29,11 @@ div.dest {
 
 .glyphicon {
   color: #fff;
-  margin-top: 5px; }
+  margin-top: 10px; }
 
 .close {
   float: right;
-  font-size: 50px;
+  font-size: 25px;
   font-weight: bold;
   line-height: 1;
   text-shadow: 0 5px 0 #000;
@@ -66,17 +69,19 @@ div.dest {
     opacity: 1;
     transform: none; } }
 
-.m-scene {
-  /** Reverse "exit" animations */ }
-  .m-scene .scene_element {
-    animation-duration: 0.25s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both; }
-  .m-scene .scene_element--fadein {
-    animation-name: fadeIn; }
-  .m-scene .scene_element--fadeinup {
-    animation-name: fadeInUp; }
-  .m-scene .scene_element--fadeinright {
-    animation-name: fadeInRight; }
-  .m-scene.is-exiting .scene_element {
-    animation-direction: alternate-reverse; }
+.m-scene .scene_element {
+  animation-duration: 0.25s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both; }
+
+.m-scene .scene_element--fadein {
+  animation-name: fadeIn; }
+
+.m-scene .scene_element--fadeinup {
+  animation-name: fadeInUp; }
+
+.m-scene .scene_element--fadeinright {
+  animation-name: fadeInRight; }
+
+.m-scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse; }
