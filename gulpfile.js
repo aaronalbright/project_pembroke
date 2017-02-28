@@ -46,8 +46,7 @@ gulp.task('watch', function() {
 gulp.task('webserver', ['sass', 'css','js'], function() {
   gulp.src(dest)
   .pipe(webserver({
-      livereload: true,
-      open: true
+      livereload: true
   }));
 });
 
