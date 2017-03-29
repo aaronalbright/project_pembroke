@@ -2,42 +2,58 @@ var $ = jQuery = require('jquery');
 var d3 = require('./d3.min.js');
 var smoothState = require('./smoothState.min.js');
 require('./bootstrap.min.js');
+var Handlebars = require('handlebars');
 
 $(document).ready(function() {
 
-chartInit();
+$('.dest').hide();
 
-var $page = $('#main'),
-      options = {
-        debug: true,
-        prefetch: true,
-        cacheLength: 0,
-        forms: 'form',
-        onStart: {
-          duration: 250, // Duration of our animation
-          render: function ($container) {
-            // Add your CSS animation reversing class
-            $container.addClass('is-exiting');
-            // Restart your animation
-            smoothState.restartCSSAnimations();
-          }
-        },
-        onReady: {
-          duration: 0,
-          render: function ($container, $newContent) {
-            // Remove your CSS animation reversing class
-            $container.removeClass('is-exiting');
-            // Inject the new content
-            $container.html($newContent);
-          }
-        },
-        onAfter: function() {
-          chartInit();
-          }
-      },
-      smoothState = $page.smoothState(options).data('smoothState');
+var warningData;
+
+handles();
+
+// builds handlebar templates
+function handles(){
+  if ($('#warning-icons').length>0) {
+  $.getJSON('/data/warningLights.json', function(data) {
+    var iconList = $('#warning-icons').html();
+    var iconScript = Handlebars.compile(iconList);
+
+    $('#icon-content').append(iconScript(data));
+    });
+  }
+}
+
+var warnFilename = '';
+
+// shows content
+$('#icon-content').on('click', 'span', function() {
+    $('.warning-title').html($(this).data('warning'));
+    $('.warning-meaning').html($(this).data('meaning'));
+    $('.warning-what').html($(this).data('what'));
+    $('.warning-why').html($(this).data('why'));
+    warnFilename = $(this).data('filename');
+    $('.icondest').addClass(warnFilename);
+    // $('#icon-content').hide();
+    // $('nav').hide();
+    $('<div id="chart"></div>').insertAfter('.why');
+    $('.dest').show();
+  });
+
+// hides content
+$('.dest').on('click', 'a', function() {
+  // $('#icon-content').show();
+  $('#chart').remove();
+  // $('nav').show();
+  // $('.dest').hide();
+  $('.icondest').removeClass(warnFilename);
+})
+
+
 });
 
+
+// builds D3 chart
 function chartInit(){
   var bardata = [];
 
@@ -66,13 +82,6 @@ function chartInit(){
           .domain(d3.range(0, bardata.length))
           .rangeBands([0, height], 0.2)
 
-  var tooltip = d3.select('body').append('div')
-          .style('position', 'absolute')
-          .style('padding', '0 10px')
-          .style('background', 'white')
-          .style('opacity', 0)
-          .style('color','#2E2E2E')
-
     var myChart = d3.select('#chart').append('svg')
                 .attr('height', height)
                 .attr('width', width)
@@ -91,14 +100,6 @@ function chartInit(){
 
                 .on('mouseover', function(d) {
 
-                    tooltip.transition()
-                        .style('opacity', .9)
-
-                    tooltip.html(d)
-                        .style('left', (d3.event.pageX - 35) + 'px')
-                        .style('top',  (d3.event.pageY - 30) + 'px')
-
-
                     tempColor = this.style.fill;
                     d3.select(this)
                         .style('opacity', .5)
@@ -116,8 +117,7 @@ function chartInit(){
     })
     .attr('x', 0)
     .delay(function(d, i) {
-    return i * 10;
+    return i * 5;
     })
-    .duration(2000)
-    .ease('elastic')
+    .duration(500)
 }

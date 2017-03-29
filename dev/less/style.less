@@ -3,56 +3,52 @@
 @import url(icomoon.css);
 body {
   background-color: #2E2E2E;
-  padding-bottom: 50px;
-}
-h1,
-h2,
-h3,
-h4,
-p {
-  color: #fff;
-}
+  padding-bottom: 50px; }
+
+h1, h2, h3, h4, p {
+  color: #fff; }
+
 h4 {
-  text-decoration: underline;
-}
+  text-decoration: underline; }
+
 h2 {
-  margin-top: 0;
-}
+  margin-top: 0; }
+
 .icon {
-  text-align: center;
-}
+  text-align: center; }
+
 a:hover {
-  text-decoration: none;
-}
+  text-decoration: none; }
+
 .icondest::before {
   font-size: 50px;
   -webkit-text-stroke: 0.5px #dd2c00;
-  border: 15px #080808 solid;
-}
+  border: 15px #080808 solid; }
+
 div.dest {
-  padding-top: 20px;
-}
+  padding-top: 20px; }
+
 .glyphicon {
   color: #fff;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
+
 .close {
   float: right;
   font-size: 25px;
   font-weight: bold;
   line-height: 1;
   text-shadow: 0 5px 0 #000;
-  opacity: 1;
-}
+  opacity: 1; }
+
 .close:hover,
 .close:focus {
   color: #E8E8E8;
   text-decoration: none;
   cursor: pointer;
   filter: alpha(opacity=50);
-  opacity: .5;
-}
-.slide {
+  opacity: .5; }
+
+  .slide {
   flex-direction: column;
   position: absolute;
   top: 0;
@@ -62,10 +58,12 @@ div.dest {
   overflow: auto;
   box-sizing: border-box;
   z-index: 999;
-}
-.slide#menu {
-  z-index: 1;
-}
+  }
+
+  .slide#menu {
+    z-index: 1;
+  }
+
 .dest {
   opacity: 0;
   transition: all 900ms;
@@ -73,11 +71,13 @@ div.dest {
 .slide:target .dest {
   opacity: 1;
 }
+
 .slide#slice {
   background-color: #2E2E2E;
-  transition: all 400ms cubic-bezier(0.19, 1, 0.56, 1);
-  transform: translate3d(0, -100%, 0);
+  transition: all 400ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
+  transform: translate3d( 0, -100%, 0);
 }
+
 .slide#slice:target {
-  transform: translate3d(0, 0, 0);
+  transform: translate3d( 0, 0, 0);
 }

@@ -1,0 +1,15 @@
+{
+  "indicator":
+  [{"warning":"Check Engine Light","iconfile":"flaticon-malfunction-indicador","meaning":"Indicates the engine computer has set a Diagnostic Trouble Code (DTC). Usually requires diagnosis with a professional scan tool.","what":"This light indicates something is wrong with your enginge, and it should be taken to a professional to be diagonosed.<br>However, here are the <b>top five reasons</b> why it might be on:","why":"Here's the average price breakdown for the variety of reasons this light might come on.<br>1) Replace Oxygen Sensor<br>2)Replace Catalytic Converter<br>3)Replace Ignition Coil and Spark Plug<br>4)Inspect for Loose Fuel Cap and Tighten or Replace as Necessary<br>5)Replace Thermostat"},
+{"warning":"Coolant Temperature Warning","iconfile":"flaticon-engine-coolant","meaning":"The engine coolant temprature gauge has dected an issue or is malfuctioning.","what":null,"why":null},
+{"warning":"Oil Pressure Warning","iconfile":"flaticon-oil","meaning":"The engine oil pressure gauge has dected an issue or is malfuctioning.","what":null,"why":null},
+{"warning":"Brake System Warning","iconfile":"flaticon-brake-system-warning","meaning":"","what":null,"why":null},
+{"warning":"Airbag Warning","iconfile":"flaticon-airbag","meaning":"","what":null,"why":null},
+{"warning":"Tire Pressure Warning","iconfile":"icon-TPMS_warning_icon","meaning":"","what":null,"why":null},
+{"warning":"Battery Warning","iconfile":"flaticon-battery","meaning":"","what":null,"why":null},
+{"warning":"Lamp Out Warning","iconfile":"flaticon-light","meaning":"","what":null,"why":null},
+{"warning":"Washer Fluid Low","iconfile":"flaticon-winshield-wiper","meaning":"","what":null,"why":null},
+{"warning":"ESP Fault","iconfile":"flaticon-warning","meaning":"","what":null,"why":null},
+{"warning":"Glow Plug Alert (Diesel Only) ","iconfile":"flaticon-glowplug","meaning":"","what":null,"why":null},
+{"warning":"Service Vehicle Soon","iconfile":"","meaning":"","what":null,"why":null}]
+}

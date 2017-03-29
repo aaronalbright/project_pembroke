@@ -1,6 +1,6 @@
 {
   "name": "pembroke",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "A web app that helps you understand your car's language.",
   "main": "index.js",
   "scripts": {
@@ -18,11 +18,13 @@
     "gulp-clean-css": "^3.0.2",
     "gulp-concat-css": "^2.3.0",
     "gulp-if": "^2.0.1",
+    "gulp-less": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.8",
     "gulp-webserver": "^0.9.1",
+    "handlebars": "^4.0.6",
     "jquery": "^3.1.1",
     "lodash.assign": "^4.2.0",
     "vinyl-source-stream": "^1.1.0",

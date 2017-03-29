@@ -1,5 +1,6 @@
 @import 'bootstrap.css';
 @import 'flaticon.css';
+@import 'icomoon.css';
 
 body {
   background-color: #2E2E2E;
@@ -56,61 +57,4 @@ div.dest {
   cursor: pointer;
   filter: alpha(opacity=50);
   opacity: .5;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-
-.m-scene {
-  .scene_element {
-    animation-duration: 0.25s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-  }
-  .scene_element--fadein {
-    animation-name: fadeIn;
-  }
-  .scene_element--fadeinup {
-    animation-name: fadeInUp;
-  }
-  .scene_element--fadeinright {
-    animation-name: fadeInRight;
-  }
-  &.is-exiting {
-      .scene_element {
-        animation-direction: alternate-reverse;
-      }
-  }
 }

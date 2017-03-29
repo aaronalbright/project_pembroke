@@ -13,8 +13,8 @@
   <![endif]-->
 </head>
 <body>
-  <div id="main" class="m-scene">
-  <nav class="navbar navbar-inverse navbar-static-top scene_element scene_element--fadein">
+  <div class="slide" id="menu">
+  <nav class="navbar navbar-inverse navbar-static-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -25,50 +25,51 @@
         </button>
         <a class="navbar-brand" href="index.html">[ project pembroke ]</a>
       </div>
-
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Feedback</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container scene_element scene_element--fadeinup">
-    <script id="warning-pop" type="text/x-handlebars-template">
-      {{#each warning}}
-      <div class="col-xs-6 col-sm-4 col-md-3 icon">
-      <a href="../dest.html"><span class="{{filename}} icon"></span></a>
+  <div class="container">
+    <script id="warning-icons" type="text/x-handlebars-template">
+      {{#each indicator}}
+      <div id="dataFoo" class="col-xs-6 col-sm-4 col-md-3 icon">
+      <a href="#slice"><span data-warning="{{warning}}" data-meaning="{{meaning}}" data-what="{{what}}" data-why="{{why}}" data-filename="{{iconfile}} "class="{{iconfile}} icon"></span></a>
       </div>
       {{/each}}
     </script>
-    <div id="warning-content" class="row">
-      <div class="col-xs-6 col-sm-4 col-md-3 icon">
-      <a href="../dest.html"><span class="flaticon-engine-coolant icon"></span></a>
+    <div id="icon-content" class="row">
+    </div> <!-- row -->
+    </div> <!-- icon container -->
+  </div> <!-- home div-->
+
+  <div class="slide" id="slice">
+    <div class="container dest">
+      <a href="#menu" aria-label="Close"><span class="glyphicon glyphicon-remove close"></span></a>
+      <span class="icondest" data-light=""></span>
+      <h2 class="warning-title"></h2>
+        <div class="row">
+        <div class="col-md-6">
+      <h3>What it means</h3>
+      <p class="warning-meaning">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem elit, et faucibus elit cursus vitae. Nulla sit amet elit eros. Curabitur lobortis libero a cursus porttitor. Nullam sodales urna velit, nec ultricies lectus ultricies et. Quisque id diam non est lobortis mattis eget et diam. Curabitur erat orci, bibendum id quam ac, bibendum ultricies dolor. Quisque odio velit, euismod vitae diam a, bibendum aliquam mauris.</p>
       </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 icon">
-      <a href="../dest2.html"><span class="flaticon-brake-system-warning icon"></span></a>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 icon">
-      <a href="../dest.html"><span class="flaticon-malfunction-indicador icon"></span></a>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 icon">
-      <a href="../dest.html"><span class="flaticon-oil icon"></span></a>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 icon">
-      <a href="../dest.html"><span class="flaticon-warning icon"></span></a>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 icon">
-      <a href="../dest.html"><span class="flaticon-hazard icon"></span></a>
-      </div>
-      <div class="col-xs-6 col-sm-4 col-md-3 icon">
-      <a href="../dest.html"><span class="flaticon-hood icon"></span></a>
+      <div class="col-md-6">
+      <h3>What, if anything, you can do about it</h3>
+      <p class="warning-what">Suspendisse tristique gravida nisi ut tincidunt. Vivamus posuere dapibus lobortis. Sed at pharetra sapien. Morbi ac ex diam. Curabitur lobortis libero a cursus porttitor. Nullam sodales urna velit, nec ultricies lectus ultricies et. Quisque id diam non est lobortis mattis eget et diam. Curabitur erat orci, bibendum id quam ac, bibendum ultricies dolor. Quisque odio velit, euismod vitae diam a, bibendum aliquam mauris.</p>
       </div>
       </div>
-    </div>
-  </div>
-    </div>
+      <div class="row why">
+      <div class="col-md-12">
+      <h3>Why it matters</h3>
+      <p class="warning-why">Suspendisse tristique gravida nisi ut tincidunt. Vivamus posuere dapibus lobortis. Sed at pharetra sapien. Morbi ac ex diam. Curabitur lobortis libero a cursus porttitor. Nullam sodales urna velit, nec ultricies lectus ultricies et. Quisque id diam non est lobortis mattis eget et diam. Curabitur erat orci, bibendum id quam ac, bibendum ultricies dolor. Quisque odio velit, euismod vitae diam a, bibendum aliquam mauris.</p>
+      </div>
+      </div>
+      <a href="#menu" aria-label="Close"><h4>Return to list</h4></a>
+    </div> <!-- content container -->
+  </div> <!-- panel div -->
       <script src="js/script.js"></script>
 </body>
 </html>
