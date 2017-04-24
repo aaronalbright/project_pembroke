@@ -1,15 +1,145 @@
 {
   "indicator":
-  [{"warning":"Check Engine Light","iconfile":"flaticon-malfunction-indicador","meaning":"Indicates the engine computer has set a Diagnostic Trouble Code (DTC). Usually requires diagnosis with a professional scan tool.","what":"This light indicates something is wrong with your enginge, and it should be taken to a professional to be diagonosed.<br>However, here are the <b>top five reasons</b> why it might be on:","why":"Here's the average price breakdown for the variety of reasons this light might come on.<br>1) Replace Oxygen Sensor<br>2)Replace Catalytic Converter<br>3)Replace Ignition Coil and Spark Plug<br>4)Inspect for Loose Fuel Cap and Tighten or Replace as Necessary<br>5)Replace Thermostat"},
-{"warning":"Coolant Temperature Warning","iconfile":"flaticon-engine-coolant","meaning":"The engine coolant temprature gauge has dected an issue or is malfuctioning.","what":null,"why":null},
-{"warning":"Oil Pressure Warning","iconfile":"flaticon-oil","meaning":"The engine oil pressure gauge has dected an issue or is malfuctioning.","what":null,"why":null},
-{"warning":"Brake System Warning","iconfile":"flaticon-brake-system-warning","meaning":"","what":null,"why":null},
-{"warning":"Airbag Warning","iconfile":"flaticon-airbag","meaning":"","what":null,"why":null},
-{"warning":"Tire Pressure Warning","iconfile":"icon-TPMS_warning_icon","meaning":"","what":null,"why":null},
-{"warning":"Battery Warning","iconfile":"flaticon-battery","meaning":"","what":null,"why":null},
-{"warning":"Lamp Out Warning","iconfile":"flaticon-light","meaning":"","what":null,"why":null},
-{"warning":"Washer Fluid Low","iconfile":"flaticon-winshield-wiper","meaning":"","what":null,"why":null},
-{"warning":"ESP Fault","iconfile":"flaticon-warning","meaning":"","what":null,"why":null},
-{"warning":"Glow Plug Alert (Diesel Only) ","iconfile":"flaticon-glowplug","meaning":"","what":null,"why":null},
-{"warning":"Service Vehicle Soon","iconfile":"","meaning":"","what":null,"why":null}]
+  [
+     {
+        "warning": "Check Engine Light",
+        "iconfile": "flaticon-malfunction-indicator",
+        "meaning": "Your engines computer has sent a Diagnostic Trouble Code that requires a specialized scanning device to diagnose.",
+        "what": "This light indicates something is wrong with your engine, and it should be taken to a professional to be diagnosed.<br>However, here are the <b>top five reasons</b> why it might be on, and on average, how much it could cost you:<br><span class='info'>(Click on a slice to see the data)</span>",
+        "why": "Your check engine light is your car's universal signal that something isn't right. You might not know, but it knows and a professional mechanic can tell you. Neglecting this light can cost you as much as thousands of dollars for a full engine replacement or as little as $40 to replace your gas gap. Regardless, the risk is too high, and you may regret it sooner rather than later. Don't ignore this light."
+     },
+     {
+        "warning": "Coolant Temp. Warning",
+        "iconfile": "flaticon-engine-coolant",
+        "meaning": "Your car's temperature is above its normal limit. This is also usually indicated by a temperature gauge on your dashboard. This  may be do to a faulty gauge, coolant leak or faulty cooling fan. ",
+        "what": "Check your coolant level and cooling fan. Coolant leaks will be needed to be taken to a mechanic for proper diagnosis.",
+        "why": "No one wants to be stranded on the side of the road with an overheating engine. Driving with an overheating engine can result in repairs far more expensive than the average $176 to $222 parts and labor cost."
+     },
+     {
+        "warning": "Oil Pressure Warning",
+        "iconfile": "flaticon-oil",
+        "meaning": "The engine oil pressure gauge has detected an issue or is malfunctioning.",
+        "what": "Immediately the check oil level in your car. If it's low, top it off as soon as possible. If the level is correct and the light still comes on, take it to a professional as soon as possible.",
+        "why": "Sometimes, by the time this light comes on, there may already be damage to your engine. Oil is what keeps your engine running smooth, without it, the interior, costly to repair parts inside the engine will become worn and in need of replacement. <br> Oil changes are some of the easiest maintenance routines you can give your car. Spending about $25 to change your oil is a lot less than spending up thousands of dollars to replace your engine."
+     },
+     {
+        "warning": "Brake System Warning",
+        "iconfile": "flaticon-brake-system-warning",
+        "meaning": "Indicates one of three possible issues: the parking brake is on, there's problem with the braking system or the brake fluid is low",
+        "what": "Check your brake fluid and make sure the parking brake is fully released. If the light persists, it will need a professional diagnosis.",
+        "why": "It's always a good idea to check your brake fluid level every few weeks to ensure there's no leaks. A faulty break system can result in devastating accidents while on the road."
+     },
+     {
+        "warning": "Airbag Warning",
+        "iconfile": "flaticon-airbag",
+        "meaning": "If this light stays illuminated after starting, it indicates that the vehicle has found a fault in the airbag system. ",
+        "what": "Not much. You will need to take your car to a professional to have it full diagnosed and repaired.",
+        "why": "Airbags can save lives in the case of car collisions. You want your airbag to go off when you need it. Just because you don't need your airbag right now, doesn't mean you won't need it later."
+     },
+     {
+        "warning": "Tire Pressure Warning",
+        "iconfile": "icon-tpms",
+        "meaning": "Indicates the tire pressure monitoring system has found a tire with low air pressure or there may be a sensor malfunction.",
+        "what": "Check your tire pressure. Your tires specific proper pressure can be found on the side of the tire itself. <br> Some vehicles will allow you to manually reset this light once you've filled your tires, others will require a professional.",
+        "why": "Low tire pressure can reduce the life of your tires and, more importantly, hinder your car's fuel efficiency. Don't wait for this light to tell you. If you want to get the most mileage from your gas, check your tire pressure regularly."
+     },
+     {
+        "warning": "Battery Warning",
+        "iconfile": "flaticon-battery",
+        "meaning": "Indicates one of three issues: a loose battery or start terminal, an alternator failure or a broken or loose drive belt.",
+        "what": "Check the connectors on your battery to ensure they are tight. You may need a battery replacement. In case of a faulty drive belt, take it to a professional right away.",
+        "why": "A broken drive belt is a serious problem. If neglected, this light may prevent your car from starting."
+     },
+     {
+        "warning": "Lamp Out Warning",
+        "iconfile": "flaticon-light",
+        "meaning": "Indicates that there is an exterior light on the vehicle that is not functioning properly.",
+        "what": "External light repairs can be tricky, though they technically can be done without a professional. Regardless, depending on your vehicle, a professional will be needed to reset the light after repairs.",
+        "why": "In some states, driving with a light out can result in a fine. This light can be as minor as a turn signal issue or a headlight or taillight has gone out."
+     },
+     {
+        "warning": "Washer Fluid Low",
+        "iconfile": "flaticon-windshield-wiper",
+        "meaning": "Your windshield washer fluid is low.",
+        "what": "Simply refill your vehicles washer fluid. Some cars have separate containers for the front and rear windows.",
+        "why": "The most minor of warning lights, neglecting this will simply leave you with disappointment when you want to give your windshield a clean rinse. At worst, you'll reduce the life of the windshield wipers."
+     },
+     {
+        "warning": "ESP Fault",
+        "iconfile": "flaticon-warning",
+        "meaning": "Indicates that there is a issue with the vehicle's traction control/anti-skid or electronic stability system.",
+        "what": "You'll need to take it to a professional to diagnose. ",
+        "why": "An ESP fault could have an effect on your cars handling on the road, especially in unfavorable weather conditions."
+     },
+     {
+        "warning": "Glow Plug Alert (Diesel Only) ",
+        "iconfile": "flaticon-glowplug",
+        "meaning": "On diesel vehicles this light indicates that the engine's glow plugs are warming up and the engine should not be started until this light goes out.",
+        "what": "If this light comes on why'll driving, you'll need to take it to a professional to diagnose. ",
+        "why": "Typically, this light won't pose a major threat to your vehicle as long as the light goes out when the glow plugs have reached their proper temperature. However, if the light persists, you'll want to take it to a mechanic."
+     },
+     {
+        "warning": "Service Vehicle Soon",
+        "iconfile": "icon-service-soon",
+        "meaning": "Typically indicates a lighting or other electrical problem that is controlled by the body control module. It may also be used as a traction control warning.",
+        "what": "Check all  your lights (head lights, turn signals, brake lights, and hazard lights) for outages. You'll need to take it to a mechanic to properly diagnosed.",
+        "why": "Not all vehicles have this light and it may look different depending on your car."
+     },
+     {
+        "warning": "Transmission Temp.",
+        "iconfile": "icon-trans-temp",
+        "meaning": "The transmission is operating at a higher-than-normal temperature.",
+        "what": "Check the transmission fluid level and engine coolant level.  You should always bring your car to a professional if this light comes, however.",
+        "why": "This warning means something may be wrong with your transmission, which is a critical part of your car. It's also one of the most costly repairs. Don't take the risk that it's just a faulty gauge. See a professional as soon as possible."
+     },
+     {
+        "warning": "Oil Change Reminder",
+        "iconfile": "icon-oil-change",
+        "meaning": "Indicates that oil life has expired. This light is usually found on newer vehicles.",
+        "what": "Change your oil. Seriously—change your oil.",
+        "why": "Oil is what keeps your engine running smooth, without it, the interior, costly to repair parts inside the engine will become worn and in need of replacement. <br> Oil changes are some of the easiest maintenance routines you can give your car. Spending about $25 to change your oil is a lot less than spending up thousands of dollars to replace your engine."
+     },
+     {
+        "warning": "Reduced Power Warning",
+        "iconfile": "icon-reduced-power",
+        "meaning": "Indicates the engine computer has limited engine power output.",
+        "what": "Requires a professional diagnoses. This light is similar to the standard check-engine light in that there are numerous reason this light could come one. ",
+        "why": "Today's cars are full of electronically controlled parts. The more parts of your car that are controlled by a computer, the more likely this light will come on when it detects an issue—none of which should be neglected."
+     },
+     {
+        "warning": "Security Alert",
+        "iconfile": "icon-security",
+        "meaning": "This symbol will vary the most from vehicle to vehicle. If this symbol lights momentarily, it means the ignition switch is locked. If it comes on while driving, it indicates an issue with the security system. ",
+        "what": "This light can result from using an incorrect or faulty key to start your vehicle. If it's a security system issue, a professional will need to diagnose it.",
+        "why": "If this light is giving you trouble, you may not be able to start car. Again, this light will vary across vehicle makes, but you should always call or see a professional if you can't start your car."
+     },
+     {
+        "warning": "Traction Control Indicator",
+        "iconfile": "icon-traction-warning",
+        "meaning": "Lights up when the vehicle's traction control/anti-skid or electronic stability system is in use.",
+        "what": "Unlike other warning lights, this one means your car's traction control is working as intended.",
+        "why": "Traction control helps you drive your car in unfavorable weather concerns. This light is simply an indicator, not a warning."
+     },
+     {
+        "warning": "Fog Lamp",
+        "iconfile": "flaticon-low-beam",
+        "meaning": "Indicates that the vehicle's front fog lamps are on",
+        "what": "If you find your fog lights on when you don't want them, you'll need to the locate the switch to turn them off.",
+        "why": "Like the name suggests, your fog lights are to give you car better visibility when driving through heavy fog. However, they should only be used for fog. Using them in other weather conditions could be worse for your visibility while driving."
+     },
+     {
+        "warning": "Door Ajar Warning",
+        "iconfile": "flaticon-doors",
+        "meaning": "Indicates that a door (including hood and trunk) is not closed.",
+        "what": "Open and close all doors, including hood and trunk.",
+        "why": "If vehicle is left in this condition overnight it can drain the battery, which may mean you'll have issues starting your car the next day."
+     },
+     {
+        "warning": "Overdrive Light",
+        "iconfile": "icon-overdrive",
+        "meaning": "This light indicates that the vehicle's overdrive system has been manually turned off.",
+        "what": "Typically the overdrive system is controlled by an on/off switch.",
+        "why": "The overdrive system, if you car has it, allows your car to operate more efficiently while cruising. Usually, you'll want overdrive on when your average speed is about 45 mph. "
+     }
+  ]
 }

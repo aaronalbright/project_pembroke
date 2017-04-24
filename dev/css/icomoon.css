@@ -1,17 +1,17 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?ms7imk');
-  src:  url('../fonts/icomoon.eot?ms7imk#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?ms7imk') format('truetype'),
-    url('../fonts/icomoon.woff?ms7imk') format('woff'),
-    url('../fonts/icomoon.svg?ms7imk#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot');
+  src:  url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.svg?#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before,[class^="icon-"]:after, [class*=" icon-"]:after {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'icomoon';
   font-style: normal;
   font-size: 100px;
   color: #ff3d00;
@@ -26,6 +26,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-TPMS_warning_icon:before {
+.icon-traction-warning:before {
+  content: "\e90c";
+}
+.icon-overdrive:before {
   content: "\e900";
+}
+.icon-security:before {
+  content: "\e901";
+}
+.icon-oil-change:before {
+  content: "\e906";
+}
+.icon-service-soon:before {
+  content: "\e907";
+}
+.icon-reduced-power:before {
+  content: "\e90a";
+}
+.icon-tpms:before {
+  content: "\e90b";
+}
+.icon-trans-temp:before {
+  content: "\e90d";
 }

@@ -1,10 +1,26 @@
-[{"year":2015,"labor":"155.15 ","parts":"232.16 ","cost":"387.31 "},
-{"year":2014,"labor":"161.61 ","parts":"228.77 ","cost":"390.38 "},
-{"year":2013,"labor":"157.23 ","parts":"235.26 ","cost":"392.49 "},
-{"year":2012,"labor":"138.96 ","parts":"228.88 ","cost":"367.84 "},
-{"year":2011,"labor":"118.61 ","parts":"215.32 ","cost":"333.93 "},
-{"year":2010,"labor":"143.61 ","parts":"212.44 ","cost":"356.04 "},
-{"year":2009,"labor":"138.37 ","parts":"221.13 ","cost":"359.50 "},
-{"year":2008,"labor":"135.21 ","parts":"220.98 ","cost":"356.19 "},
-{"year":2007,"labor":"152.92 ","parts":"256.98 ","cost":"409.91 "},
-{"year":2006,"labor":"131.06 ","parts":"291.30 ","cost":"422.36 "}]
+{
+  "yearlyAverage":
+[{"key":"2015","cost":"387.31"},
+{"key":"2014","cost":"390.38"},
+{"key":"2013","cost":"392.49"},
+{"key":"2012","cost":"367.84"},
+{"key":"2011","cost":"333.93"},
+{"key":"2010","cost":"356.04"},
+{"key":"2009","cost":"359.50"},
+{"key":"2008","cost":"356.19"},
+{"key":"2007","cost":"409.91"},
+{"key":"2006","cost":"422.36"}],
+
+  "mostExp":
+[{"key":"1","type":"Replace Engine","cost":"7821"},
+{"key":"2","type":"Replace Engine Block Assembly","cost":"6883"},
+{"key":"3","type":"Replace Steering Column","cost":"6139"},
+{"key":"4","type":"Replace Transmission Assembly","cost":"5191"},
+{"key":"5","type":"Replace Transmission and Torque Converter","cost":"5145"},
+{"key":"6","type":"Replace Hybrid Battery","cost":"4282"},
+{"key":"7","type":"Replace Audio and Visual Control Unit","cost":"4095"},
+{"key":"8","type":"Replace Transmission Case and Torque Converter","cost":"4077"},
+{"key":"9","type":"Replace Transmission Assembly","cost":"3723"},
+{"key":"110","type":"Replace Transmission Speed Sensor","cost":"3504"}]
+
+}

@@ -1,3 +1,8 @@
 .DS_Store
 node_modules
 pembrokedata.xlsx
+~$pembrokedata.xlsx
+/functions
+.firebaserc
+firebase.json
+database.rules.json
