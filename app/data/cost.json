@@ -21,6 +21,6 @@
 {"key":"7","type":"Replace Audio and Visual Control Unit","cost":"4095"},
 {"key":"8","type":"Replace Transmission Case and Torque Converter","cost":"4077"},
 {"key":"9","type":"Replace Transmission Assembly","cost":"3723"},
-{"key":"110","type":"Replace Transmission Speed Sensor","cost":"3504"}]
+{"key":"10","type":"Replace Transmission Speed Sensor","cost":"3504"}]
 
 }

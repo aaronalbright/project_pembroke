@@ -136,7 +136,7 @@ function pieInit(){
   // Pie animation on scroll
   if ($(window).width() <= 991) {
   $('#panel').on('scroll.pie',function () {
-    var pieLoc = $('.pieStart').offset().top + 50;
+    var pieLoc = $('.pieStart').offset().top + 75;
 
     if ($('.page#panel').scrollTop() >= pieLoc) {
       slices.transition().duration(2000)

@@ -83,7 +83,7 @@
         "iconfile": "icon-service-soon",
         "meaning": "Typically indicates a lighting or other electrical problem that is controlled by the body control module. It may also be used as a traction control warning.",
         "what": "Check all  your lights (head lights, turn signals, brake lights, and hazard lights) for outages. You'll need to take it to a mechanic to properly diagnosed.",
-        "why": "Not all vehicles have this light and it may look different depending on your car."
+        "why": "Not all vehicles have this light and it may look different depending on your car. Treat with the same importance as a Check Engine light."
      },
      {
         "warning": "Transmission Temp.",
