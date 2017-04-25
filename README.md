@@ -10,6 +10,11 @@ This project was designed to help people understand their car's dashboard warnin
 
 This app was made as part of a four-month independent study at the University of Florida from January to April 2017.
 
+[Try it out.](http://upcar.albright.online)
+
+*Note: In Chrome on Android or Safari on iOS add it to your homescreen to see the "progressive" part.*
+
+
 ## What I made
 
 UpCar is a progressive web app built to provide information on 20 dashboard warning lights.

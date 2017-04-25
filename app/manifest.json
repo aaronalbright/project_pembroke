@@ -22,5 +22,7 @@
   "start_url": "index.html",
   "display": "standalone",
   "description": "An app to keep up with your car",
-  "version": "1.0"
+  "version": "1.0",
+  "back_color": "#2E2E2E",
+  "theme_color": "#00C851"
 }
